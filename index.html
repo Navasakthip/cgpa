@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h5 style="background-color:orange;color:darkblue"><i>TO CALCULATE  CGPA and GPA</i></h5>
+</head>
+<body style="text-align:center; background-color:silver;">
+    <form>
+        <label for="m1">Enter mark1</label><br>
+        <input type="text" id="m1" name="m1">
+        <br><br>
+        <label for="m2">Enter mark2</label><br>
+        <input type="text" id="m2" name="m2">
+        <br><br>
+        <label for="m3">Enter mark3</label><br>
+        <input type="text" id="m3" name="m3">
+        <br><br>
+        <label for="m4">Enter mark4</label><br>
+        <input type="text" id="m4" name="m4">
+        <br><br>
+        <label for="m5">Enter mark5</label><br>
+        <input type="text" id="m5" name="m5">
+        <br><br>
+        <label for="gpa">GPA</label><br>
+        <input type="text" id="gpa" name="gpa">
+        <br><br>
+        <input style="color:rgb(8, 8, 8);background-color: rgb(75, 221, 107);"type="button" id="btn" onclick="func()" value="submit">
+    </form>
+  <b style="color:rgb(187, 20, 173)" id="demo">GPA is:</b><br><br>
+  <b style="color:rgb(187, 20, 173)" id="demo1">CGPA is:</b>
+    <script>
+        function func(){
+            let a=document.getElementById("m1");
+            let b=document.getElementById("m2");
+            let c=document.getElementById("m3");
+            let d=document.getElementById("m4");
+            let e=document.getElementById("m5");
+            let f=document.getElementById("gpa");
+            let g=parseInt(document.getElementById("gpa").value);
+            let h=(parseInt(a.value)+parseInt(b.value)+parseInt(c.value)+parseInt(d.value)+parseInt(e.value))/50;  
+            document.getElementById("demo").innerHTML = ("GPA is:"+h);
+             let i=(g+h)/2;
+            document.getElementById("demo1").innerHTML = ("CGPA is:"+i);
+        }
+    </script>
+</body>
+</html>
